@@ -9,7 +9,7 @@ import {
   ListGroup,
   ListGroupItem
 } from "reactstrap";
-
+import {g_Food_Category_MAP} from "./Constant"
 
 
 function Menu(props) {
@@ -21,7 +21,7 @@ function Menu(props) {
       <Card>
         <CardBody>
           <CardTitle className="font-weight-bold text-center">
-            {menu_name} Menu       
+            {g_Food_Category_MAP[menu_name]} Menu       
             <Link to={`/addFood/${menu_name}`}>+</Link>
           </CardTitle>
           <CardText>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Redirect } from "react-router-dom";
 import "./App.css";
 import Home from "./Home";
 import SnackOrBoozeApi from "./Api";
@@ -87,6 +87,8 @@ function App() {
             <Route>
               <p>Hmmm. I can't seem to find what you want.</p>
             </Route>
+            
+            <Redirect to="/" />
           </Switch>
         </main>
       </BrowserRouter>
